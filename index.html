@@ -1,76 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spark | Java Backend Developer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balaji Balasubramanian | Java Backend Engineer</title>
+
+  <!-- Devicon Tech Logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Spark</h1>
-    <p>Java Backend Developer | Spring Boot | PostgreSQL</p>
+<header data-aos="fade-down">
+  <h1>Balaji Balasubramanian</h1>
+  <p class="subtitle">
+    Java Backend Engineer | Microservices | Cloud & Distributed Systems
+  </p>
+  <p class="links">
+    <a href="mailto:balabalaji6701@gmail.com">Email</a> ·
+    <a href="https://github.com/" target="_blank">GitHub</a> ·
+    <a href="https://linkedin.com/in/balaji-balasubramanian-777705178" target="_blank">LinkedIn</a>
+  </p>
 </header>
 
-<section>
+<main class="container">
+
+  <!-- ABOUT -->
+  <section data-aos="fade-up">
     <h2>About Me</h2>
-    <p>
-        Backend developer with experience in building scalable REST APIs
-        using Java and Spring Boot. Focused on clean architecture,
-        performance, and reliability.
+    <p class="about">
+      Java Backend Developer with 4 years of experience building scalable,
+      cloud-native and distributed systems for high-traffic retail and enterprise platforms.
+      Strong expertise in Spring Boot microservices, database performance tuning,
+      and production-grade system design.
     </p>
-</section>
+  </section>
 
-<section>
-    <h2>Skills</h2>
-    <ul class="skills">
-        <li>Java</li>
-        <li>Spring Boot</li>
-        <li>Microservices</li>
-        <li>REST APIs</li>
-        <li>PostgreSQL</li>
-        <li>Hibernate / JPA</li>
-        <li>Git</li>
-    </ul>
-</section>
+  <!-- TECH STACK -->
+  <section data-aos="fade-up">
+    <h2>Tech Stack</h2>
+    <div class="logos">
+      <i class="devicon-java-plain"></i>
+      <i class="devicon-spring-plain"></i>
+      <i class="devicon-amazonwebservices-plain-wordmark"></i>
+      <i class="devicon-azure-plain"></i>
+      <i class="devicon-googlecloud-plain"></i>
+      <i class="devicon-postgresql-plain"></i>
+      <i class="devicon-docker-plain"></i>
+      <i class="devicon-kubernetes-plain"></i>
+      <i class="devicon-apachekafka-plain"></i>
+      <i class="devicon-redis-plain"></i>
+      <i class="devicon-git-plain"></i>
+    </div>
+  </section>
 
-<section>
-    <h2>Projects</h2>
+  <!-- EXPERIENCE -->
+  <section data-aos="fade-up">
+    <h2>Experience</h2>
 
-    <div class="project">
-        <h3>Order Management Service</h3>
-        <p>
-            Built a Spring Boot microservice to manage orders with CRUD APIs,
-            JWT-based authentication, and PostgreSQL integration.
-        </p>
-        <p><strong>Tech:</strong> Java, Spring Boot, PostgreSQL</p>
-        <a href="https://github.com/yourusername/order-service" target="_blank">GitHub</a>
+    <div class="experience">
+      <h3>Java Microservices Developer — Infosys</h3>
+      <span>Dec 2024 – Present</span>
+      <ul>
+        <li>Engineered scalable microservices for Inventory, Order Promise, and Stock Allocation systems.</li>
+        <li>Reduced API latency from 2.04s to 400ms via centralized config services and PostgreSQL tuning.</li>
+        <li>Implemented Redis caching and Spring Cloud components for high availability.</li>
+        <li>Built Cucumber regression suites and conducted NeoLoad benchmarking.</li>
+      </ul>
     </div>
 
-    <div class="project">
-        <h3>User Authentication API</h3>
-        <p>
-            Implemented authentication and authorization using Spring Security
-            and JWT with role-based access control.
-        </p>
-        <p><strong>Tech:</strong> Spring Security, JWT</p>
-        <a href="https://github.com/yourusername/auth-service" target="_blank">GitHub</a>
+    <div class="experience">
+      <h3>Software Developer — Cognizant</h3>
+      <span>May 2024 – Dec 2024</span>
+      <ul>
+        <li>Automated daily inventory audit pipelines using Java.</li>
+        <li>Integrated BigQuery-based multi-source validations.</li>
+        <li>Improved observability using Kibana and Prometheus.</li>
+      </ul>
     </div>
-</section>
 
-<section>
-    <h2>Contact</h2>
-    <p>Email: yourmail@gmail.com</p>
-    <p>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-    </p>
-</section>
+    <div class="experience">
+      <h3>Junior Software Engineer — Cognizant </h3>
+      <span>Jun 2022 – May 2024</span>
+      <ul>
+        <li>Developed Spring Boot APIs for store equipment monitoring platforms.</li>
+        <li>Implemented Saga pattern across distributed microservices.</li>
+        <li>Deployed services using Docker, Kubernetes, and ArgoCD.</li>
+      </ul>
+    </div>
+
+  </section>
+
+</main>
 
 <footer>
-    <p>© 2026 Spark</p>
+  © 2026 Balaji Balasubramanian
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 900 });
+</script>
 
 </body>
 </html>
