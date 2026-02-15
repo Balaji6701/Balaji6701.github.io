@@ -1,163 +1,283 @@
+/* ============================= */
+/* THEME VARIABLES */
+/* ============================= */
+
+:root {
+  --bg: #f5efe6;            /* soft beige */
+  --card: #ffffffdd;        /* warm soft white */
+  --text: #2a2a2a;
+  --subtext: #6e6a63;
+  --accent: #1e40af;
+  --border: #e6dfd5;
+}
+
+body.dark {
+  --bg: #0f0f10;            /* blackish charcoal */
+  --card: #1a1a1c;          /* soft elevated dark */
+  --text: #f3f3f3;
+  --subtext: #a1a1aa;
+  --accent: #3b82f6;
+  --border: #2a2a2e;
+}
+
+/* ============================= */
+/* RESET */
+/* ============================= */
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Segoe UI", sans-serif;
-  margin: 0;
-  background: #f9fafb;
-  color: #111827;
-  line-height: 1.6;
+html {
+  scroll-behavior: smooth;
 }
 
-header {
-  text-align: center;
-  padding: 70px 20px;
+/* ============================= */
+/* BODY */
+/* ============================= */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  flex-wrap: wrap;
+}
+
+.center {
+  flex: 1;
+  min-width: 300px;
 }
 
 header h1 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  color: #374151;
+  color: var(--subtext);
+  margin-bottom: 6px;
+}
+
+.links {
+  margin-top: 10px;
 }
 
 .links a {
-  color: #2563eb;
+  color: var(--accent);
   text-decoration: none;
-  margin: 0 5px;
+  transition: 0.3s ease;
 }
+
+.links a:hover {
+  opacity: 0.7;
+}
+
+/* ============================= */
+/* PROFILE IMAGE */
+/* ============================= */
+
+.profile-pic-container {
+  flex-shrink: 0;
+  margin-left: 40px;
+}
+
+.profile-pic-container img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 18%;
+  border: 3px solid var(--border);
+  transition: transform 0.4s ease;
+}
+
+.profile-pic-container img:hover {
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* MAIN CONTAINER */
+/* ============================= */
 
 .container {
-  max-width: 1200px;
+  width: 85%;
+  max-width: 1100px;
   margin: auto;
-  padding: 40px 20px;
+  padding-bottom: 60px;
 }
+
+/* ============================= */
+/* SECTIONS */
+/* ============================= */
 
 section {
-  margin-top: 70px;
+  margin-top: 60px;
+  padding: 35px;
+  background: var(--card);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, background 0.4s ease;
 }
 
-h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  border-left: 5px solid #2563eb;
-  padding-left: 15px;
+section:hover {
+  transform: translateY(-4px);
 }
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+/* ============================= */
+/* ABOUT */
+/* ============================= */
 
 .about {
-  max-width: 850px;
+  color: var(--text);
 }
+
+/* ============================= */
+/* TECH STACK */
+/* ============================= */
 
 .logos {
-  display: flex;
-  gap: 25px;
-  font-size: 1.5rem;
-  color: #374151;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
 }
 
-.logos div {
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
+.logos ul {
+  list-style: none;
 }
 
-.logos i {
-  transition: transform 0.3s, color 0.3s;
+.logos li {
+  padding: 8px 0;
+  color: var(--subtext);
+  transition: 0.3s ease;
 }
 
-.logos i:hover {
-  color: #2563eb;
-  transform: scale(1.15);
+.logos li:hover {
+  color: var(--accent);
+  transform: translateX(6px);
 }
+
+/* ============================= */
+/* EXPERIENCE */
+/* ============================= */
 
 .experience {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  margin-bottom: 25px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+  padding: 20px;
+  background: var(--bg);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.experience:hover {
+  transform: scale(1.02);
 }
 
 .experience h3 {
-  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
 }
 
 .experience span {
   font-size: 0.9rem;
-  color: #6b7280;
+  color: var(--subtext);
 }
 
-ul {
+.experience ul {
+  margin-top: 10px;
   padding-left: 20px;
 }
 
+.experience li {
+  margin-bottom: 8px;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
 footer {
   text-align: center;
-  margin: 80px 0 30px;
-  font-size: 0.9rem;
-  color: #6b7280;
+  padding: 25px;
+  margin-top: 40px;
+  border-top: 1px solid var(--border);
+  color: var(--subtext);
 }
 
-.profile-pic-container {
-    /* Set a fixed, equal width and height for a perfect circle */
-    width: 200px;
-    height: 200px;
-    
-    /* The key property to make the element circular */
-    border-radius: 50%;
-    
-    /* Ensures any overflowing parts of the image are hidden */
-    overflow: hidden; 
-    
-    /* Optional: Center the image within the circle and maintain aspect ratio */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid #fff; /* Optional: Add a white border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+/* ============================= */
+/* THEME BUTTON */
+/* ============================= */
+
+.theme-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  color: var(--text);
+
+  transition: 0.3s ease;
 }
 
-.profile-pic-container img {
-    /* Ensures the image fills the container while maintaining its aspect ratio */
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+.theme-btn:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
 }
 
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
 
-.header {
-  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    height: 50vh;
-    align-items: center; /* vertical center */
-}
+@media (max-width: 768px) {
 
-.center {
-   grid-column: 2;
-    text-align: center;
-}
-
-.right {
-    grid-column: 3;
-    text-align: center;
-  }
-@media (max-width: 700px) {
   .header {
-    grid-template-columns: 1fr;
-    height: auto;
+    flex-direction: column;
+    text-align: center;
     padding: 40px 20px;
-    gap: 30px;
   }
 
-  .center {
-    grid-column: 1;
+  .profile-pic-container {
+    margin: 30px 0 0 0;
   }
 
-  .right {
-    grid-column: 1;
+  header h1 {
+    font-size: 2rem;
   }
+
+  section {
+    padding: 25px;
+  }
+
+  .experience h3 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
 }
